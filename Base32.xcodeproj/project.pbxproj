@@ -16,8 +16,6 @@
 		410D728A168ED305008A46A7 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 410D7289168ED305008A46A7 /* Default.png */; };
 		410D728C168ED305008A46A7 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 410D728B168ED305008A46A7 /* Default@2x.png */; };
 		410D728E168ED305008A46A7 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 410D728D168ED305008A46A7 /* Default-568h@2x.png */; };
-		410D7291168ED305008A46A7 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 410D728F168ED305008A46A7 /* MainStoryboard.storyboard */; };
-		410D7294168ED305008A46A7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D7293168ED305008A46A7 /* ViewController.m */; };
 		410D729C168ED321008A46A7 /* Base32.m in Sources */ = {isa = PBXBuildFile; fileRef = 410D729B168ED321008A46A7 /* Base32.m */; };
 /* End PBXBuildFile section */
 
@@ -35,9 +33,6 @@
 		410D7289168ED305008A46A7 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		410D728B168ED305008A46A7 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		410D728D168ED305008A46A7 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		410D7290168ED305008A46A7 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		410D7292168ED305008A46A7 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		410D7293168ED305008A46A7 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		410D729A168ED321008A46A7 /* Base32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base32.h; sourceTree = "<group>"; };
 		410D729B168ED321008A46A7 /* Base32.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Base32.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,9 +83,6 @@
 			children = (
 				410D7286168ED305008A46A7 /* AppDelegate.h */,
 				410D7287168ED305008A46A7 /* AppDelegate.m */,
-				410D728F168ED305008A46A7 /* MainStoryboard.storyboard */,
-				410D7292168ED305008A46A7 /* ViewController.h */,
-				410D7293168ED305008A46A7 /* ViewController.m */,
 				410D729A168ED321008A46A7 /* Base32.h */,
 				410D729B168ED321008A46A7 /* Base32.m */,
 				410D727E168ED305008A46A7 /* Supporting Files */,
@@ -167,7 +159,6 @@
 				410D728A168ED305008A46A7 /* Default.png in Resources */,
 				410D728C168ED305008A46A7 /* Default@2x.png in Resources */,
 				410D728E168ED305008A46A7 /* Default-568h@2x.png in Resources */,
-				410D7291168ED305008A46A7 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,7 +171,6 @@
 			files = (
 				410D7284168ED305008A46A7 /* main.m in Sources */,
 				410D7288168ED305008A46A7 /* AppDelegate.m in Sources */,
-				410D7294168ED305008A46A7 /* ViewController.m in Sources */,
 				410D729C168ED321008A46A7 /* Base32.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,14 +184,6 @@
 				410D7281168ED305008A46A7 /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		410D728F168ED305008A46A7 /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				410D7290168ED305008A46A7 /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -304,6 +286,7 @@
 				410D7299168ED305008A46A7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

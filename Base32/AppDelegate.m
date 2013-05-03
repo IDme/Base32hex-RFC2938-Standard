@@ -25,12 +25,17 @@
  */
 
 #import "AppDelegate.h"
+#import "Base32.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    
+    NSString *valueToDecode = @"TOQQG0";
+    NSString *decodedValue = [Base32 decode:valueToDecode];
+    NSLog(@"Base32hex (RFC2938-Standard) Decoded Value: %@",decodedValue);
+    
     return YES;
 }
 							

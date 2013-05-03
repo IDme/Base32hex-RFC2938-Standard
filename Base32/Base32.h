@@ -24,36 +24,14 @@
  * IN THE SOFTWARE.
  */
 
+
+/** 
+ TroopSwap/ID.me Changelog
+ kEncodeCharsArray & kDecodeMap were modified to follow the RFC2938 Base32 standard, also known as 'base32hex'.
+ This change replaced the Crockford's Base32 standard, also known as 'modified base32hex.'
+**/
+
 #import <Foundation/Foundation.h>
-
-@interface NSString (Base32Crockford)
-
-/**
- * Convert the decimal number represented by the current string instance to its
- * Base32 representation.
- *
- * The Base32 encoding used is the variant proposed by Douglas Crockford.
- *
- * Note that the decimal number *must* have ten or *less* digits. Otherwise the
- * primitive data structures will overflow.
- *
- * @return The Base32 representation of the current string.
- *
- * @see http://www.crockford.com/wrmg/base32.html
- */
-- (NSString *)base32EncodedString;
-
-/**
- * Decodes the Base32 string represented by the current instance to its original
- * decimal value.
- *
- * @return A string representation of the original decimal value.
- *
- * @see http://www.crockford.com/wrmg/base32.html
- */
-- (NSString *)decodeBase32String;
-
-@end
 
 @interface Base32 : NSObject
 

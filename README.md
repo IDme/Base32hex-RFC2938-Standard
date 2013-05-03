@@ -1,13 +1,14 @@
-Base32
+Base32hex-RFC2938-Standard
 ======
 
-An implementation of [Douglas Crockford][dc-website]'s Base32 encoding in Objective-C. See [http://www.crockford.com/wrmg/base32.html][dc-base32-encoding] for more information.
+This is TroopSwap's Objective-C implementation of the [Base32hex (RFC2938 standard) encoder and decoder][rfc2938]. Originally, this repository was created by [MightyKan](https://github.com/mightykan/base32), and featured [Douglas Crockford][dc-website]'s Base32 encoding.
 
 *Note*: This library should not be mistaken for the [RFC4648][rfc4648] data encoding 
 specifications.
 
 **IMPORTANT NOTE**: This library can only encode decimal values with ten or *less* digits. If you require the ability to encode and decode very large number please see the [Base32 Large Number][mightykan-base32-ln] project, which uses the [OpenSSL][openssl-website] [bn(3)][openssl-docs-bignum] facilities.
 
+[rfc2938]: http://tools.ietf.org/html/rfc2938#section-3.1.2 "RFC2938"
 [dc-website]: http://www.crockford.com "Douglas Crockford's Wrrld Wide Web"
 [dc-base32-encoding]: http://www.crockford.com/wrmg/base32.html "Base32 Encoding"
 [rfc4648]: http://tools.ietf.org/html/rfc4648 "The Base16, Base32, and Base64 Data Encodings"
@@ -57,44 +58,6 @@ To decode a Base32 string, for example '14SC0PJ'
 which will yield:
 
 	1234567890
-
-
-NSString Extensions
--------------------
-Base32 extends [NSString][apple-doc-nsstring] with the `Base32Crockford` category and two utility methods.
-
-For encoding a string representation of a decimal number to Base32:
-
-	- (NSString *)base32EncodedString;
-
-For example:
-
-	NSLog(@"%@", [@"1234" base32EncodedString]);
-
-will give you:
-
-	16J
-
-For decoding a Base32 string into its original decimal value:
-
-	- (NSString *)decodeBase32String;
-
-
-For example:
-
-	NSLog(@"%@", [@"14SC0PJ" decodeBase32String]);
-
-will give you:
-
-	1234567890
-
-[apple-doc-nsstring]: https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html#//apple_ref/doc/uid/TP40003744 "NSString Class Reference"
-
-Demo Project
-------------
-The demo project comes with an iOS app that can be used as a rudimentary encoder/decoder. There is a UI for entering decimal numbers and encoding and decoding strings. There are also four small tests -- two encoding and two decoding -- that demonstrate the usage of the library. You should be able to see the results upon launching the app. The tests are in the `viewDidLoad` method, in `ViewController.m`.
-
-Note that the demo project requires iOS 5 or above, since it uses a Storyboard for its main user interface. The actual library should be usable on iOS 4 or later, or OS X v10.7 or later.
 
 License
 -------

@@ -26,6 +26,9 @@
 
 /*
  * Release History
+ * Version 1.1 (05/03/2013)
+ * ------------------------
+ * - kEncodeCharsArray & kDecodeMap were modified to follow the RFC2938 standard (e.g., base32hex)
  *
  * Version 1.0 (12/29/2012)
  * ------------------------
@@ -34,20 +37,6 @@
 
 #import "Base32.h"
 
-
-@implementation NSString (Base32Crockford)
-
-- (NSString *)base32EncodedString
-{
-    return [Base32 encode:self];
-}
-
-- (NSString *)decodeBase32String
-{
-    return [Base32 decode:self];
-}
-
-@end
 
 @implementation Base32
 
@@ -80,10 +69,10 @@
         '0', '1', '2', '3', '4',
         '5', '6', '7', '8', '9',
         'A', 'B', 'C', 'D', 'E',
-        'F', 'G', 'H', 'J', 'K',
-        'M', 'N', 'P', 'Q', 'R',
-        'S', 'T', 'V', 'W', 'X',
-        'Y', 'Z', '?'
+        'F', 'G', 'H', 'I', 'J',
+        'K', 'L', 'M', 'N', 'O',
+        'P', 'Q', 'R', 'S', 'T',
+        'U', 'V'
     };
     
     __block char *kEncodeChars = kEncodeCharsArray;
@@ -132,11 +121,10 @@
                                  @"4": @4,  @"5": @5,  @"6": @6,  @"7": @7,
                                  @"8": @8,  @"9": @9,  @"A": @10, @"B": @11,
                                  @"C": @12, @"D": @13, @"E": @14, @"F": @15,
-                                 @"G": @16, @"H": @17, @"J": @18, @"K": @19,
-                                 @"M": @20, @"N": @21, @"P": @22, @"Q": @23,
-                                 @"R": @24, @"S": @25, @"T": @26, @"V": @27,
-                                 @"W": @28, @"X": @29, @"Y": @30, @"Z": @31,
-                                 @"?": @32, @"I": @1,  @"L": @1,  @"O": @0};
+                                 @"G": @16, @"H": @17, @"I": @18, @"J": @19,
+                                 @"K": @20, @"L": @21, @"M": @22, @"N": @23,
+                                 @"O": @24, @"P": @25, @"Q": @26, @"R": @27,
+                                 @"S": @28, @"T": @29, @"U": @30, @"V": @31};
     
     // Don't do anything if the input string is of length zero.
     if ([base32String length] == 0)
