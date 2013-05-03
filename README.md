@@ -49,15 +49,15 @@ To encode a number, for example '1234':
 	
 which will yield:
 	
-	16J
+	16I
 
-To decode a Base32 string, for example '14SC0PJ'
+To decode a Base32 string, for example 'TOQQG0'
 
-	NSLog(@"%@", [Base32 decode:@"14SC0PJ"]);
+	NSLog(@"%@", [Base32 decode:@"TOQQG0"]);
 
 which will yield:
 
-	1234567890
+	999123456
 
 License
 -------
